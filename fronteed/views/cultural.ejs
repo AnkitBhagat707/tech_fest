@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cultural Events</title>
+
+<link rel="stylesheet" href="/cultural.css">
+
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="slider">
+    <div class="slides">
+      <img src="/demo img/b.jpeg" class="active">
+      <img src="/cultural event pic/11.jpeg">
+      <img src="/cultural event pic/bhangra.jpeg">
+      <img src="/cultural event pic/modlling.jpeg">
+      <img src="/cultural event pic/singing.jpeg">
+    </div>
+  </div>
+
+  
+</section>
+
+<!-- EVENTS -->
+<section class="members">
+  <h2>CULTURAL <span>Activities</span></h2>
+  <p class="subtitle">Energy • Youth • Creativity</p>
+
+  <div class="member-grid">
+
+    <a href="/student?activity=NAATI">
+      <div class="card">
+        <img src="/cultural event pic/11.jpeg">
+        <div class="overlay">
+          <h3>NAATI</h3>
+          <p>Dance</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="/student?activity=VANDANA">
+      <div class="card">
+        <img src="/cultural event pic/vandana.jpeg">
+        <div class="overlay">
+          <h3>VANDANA</h3>
+          <p>Special</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="/student?activity=BHANGRA">
+      <div class="card">
+        <img src="/cultural event pic/bhangra.jpeg">
+        <div class="overlay">
+          <h3>BHANGRA</h3>
+          <p>Dance</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="/student?activity=HARYANVI">
+      <div class="card">
+        <img src="cultural event pic/haryanvi.jpeg">
+        <div class="overlay">
+          <h3>HARYANVI</h3>
+          <p>Dance</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="/student?activity=SOUTH_INDIAN">
+      <div class="card">
+        <img src="/cultural event pic/southi ind.jpeg">
+        <div class="overlay">
+          <h3>SOUTH INDIAN</h3>
+          <p>Shows</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="/student?activity=GIDDA">
+      <div class="card">
+        <img src="/cultural event pic/Giddha.jpeg">
+        <div class="overlay">
+          <h3>GIDDA</h3>
+          <p>Dance</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="/student?activity=NEPALI">
+      <div class="card">
+        <img src="/cultural event pic/nepali.jpeg">
+        <div class="overlay">
+          <h3>NEPALI</h3>
+          <p>Dance</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="/student?activity=DUET">
+      <div class="card">
+        <img src="/cultural event pic/singing.jpeg">
+        <div class="overlay">
+          <h3>DUET</h3>
+          <p>Singing</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="/student?activity=BOLLYWOOD">
+      <div class="card">
+        <img src="/cultural event pic/bollywood.jpeg">
+        <div class="overlay">
+          <h3>BOLLYWOOD</h3>
+          <p>Dance</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="/student?activity=SKIT">
+      <div class="card">
+        <img src="/cultural event pic/skit.jpeg">
+        <div class="overlay">
+          <h3>SKIT</h3>
+          <p>Drama</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="/student?activity=MODELING">
+      <div class="card">
+        <img src="/cultural event pic/modlling.jpeg">
+        <div class="overlay">
+          <h3>MODELING</h3>
+          <p>Fashion Show</p>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<script>
+let slides = document.querySelectorAll(".slides img");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 3000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins', sans-serif;
+background:linear-gradient(135deg,#cdc0df,#aab6bc);
+padding-top:80px;
+overflow-x:hidden;
+}
+
+/* HERO IMAGE */
+
+.hero{
+width:100%;
+}
+
+.poster{
+width:100%;
+height:auto;
+display:block;
+}
+
+/* WHITE BOX */
+
+.white-box{
+background:white;
+padding:60px;
+width:100%;
+margin:auto;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ABOUT SECTION */
+
+.about{
+position:relative;
+padding:80px 120px;
+}
+
+.about-container{
+max-width:850px;
+margin:auto;
+}
+
+.about-title{
+margin-bottom:35px;
+}
+
+.about-title h1{
+font-size:48px;
+font-weight:700;
+letter-spacing:3px;
+color:#2e0467;
+}
+
+.line{
+width:170px;
+height:3px;
+background:#090909;
+margin-bottom:10px;
+}
+
+.about-content{
+list-style:none;
+}
+
+.about-content li{
+position:relative;
+padding-left:25px;
+margin-bottom:18px;
+line-height:1.5;
+font-size:18px;
+font-weight:bold;
+color:#000;
+}
+
+.about-content li::before{
+content:"•";
+position:absolute;
+left:0;
+top:0;
+font-size:22px;
+}
+
+/* DECORATIVE SHAPES */
+
+.cube{
+position:absolute;
+width:70px;
+height:70px;
+transform:rotate(50deg);
+}
+
+.cube1{
+top:70px;
+right:120px;
+background:#9d56c9;
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+.cube2{
+top:110px;
+right:80px;
+border:3px solid #4e4d87;
+background:transparent;
+}
+
+.about-content li:hover{
+transform:translateX(4px);
+transition:0.3s;
+}
+
+/* TABLET */
+
+@media(max-width:992px){
+
+.about{
+padding:60px 40px;
+}
+
+.about-title h1{
+font-size:36px;
+}
+
+.about-content li{
+font-size:16px;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:576px){
+
+.about{
+padding:50px 20px;
+}
+
+.about-title h1{
+font-size:28px;
+}
+
+.about-content li{
+font-size:15px;
+line-height:1.6;
+}
+
+.cube{
+display:none;
+}
+
+.white-box{
+padding:30px;
+}
+
+}

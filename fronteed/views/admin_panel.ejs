@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="/admin_panel.css">
+
+</head>
+<body>
+
+<div class="dashboard">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<h2>BU EMANATION</h2>
+
+<ul>
+
+<li><a href="#">Dashboard</a></li>
+
+<li><a href="/admin_panel/notice">Add Notice</a></li>
+
+<li><a href="/manage_notice">Manage Notices</a></li>
+
+<li><a href="/admin_panel/students">Student Registrations</a></li>
+
+<li><a href="/">Website</a></li>
+
+</ul>
+
+</aside>
+
+<!-- MAIN CONTENT -->
+
+<main class="main">
+
+<header class="topbar">
+
+<h1>Admin Panel</h1>
+
+</header>
+
+<section class="cards">
+
+  <div class="card">
+  <h3>Total Notices</h3>
+  <p><%= totalNotices %></p>
+</div>
+
+<div class="card">
+  <h3>Registered Students</h3>
+  <p><%= totalStudents %></p>
+</div>
+
+</section>
+
+
+
+</main>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+header{
+  background:#121212;
+  width:100%;
+  height:80px;          /* increased from 70px */
+  display:flex;
+  align-items:center;
+  padding:0 30px;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1000;
+}
+
+/* University Name */
+.university-name{
+  color:white;
+  font-size:24px;       /* slightly bigger for taller header */
+  font-weight:bold;
+}
+
+/* Navbar */
+nav{
+  margin-left:auto;
+  display:flex;
+  gap:22px;             /* slightly more spacing */
+}
+
+/* Menu links */
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  font-size:18px;       /* slightly bigger */
+  position:relative;
+  padding:5px 0;
+}
+
+/* underline animation */
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:2px;
+  background:white;
+  transition:0.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+nav a.active::after{
+  width:100%;
+}
+
+/* Hamburger */
+#menu-toggle{
+  display:none;
+  font-size:30px;       /* bigger icon */
+  color:white;
+  cursor:pointer;
+  margin-left:auto;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+
+  #menu-toggle{
+    display:block;
+  }
+
+  nav{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:80px;           /* match new header height */
+    left:0;
+    width:100%;
+    background:#121212;
+    padding:20px 30px;
+    align-items:flex-start;
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+  nav a{
+    padding:12px 0;      /* more spacing for bigger navbar */
+  }
+}
+
+/* Section offset for fixed header */
+#about {
+  position: relative;
+}
+
+#about::before {
+  content: "";
+  display: block;
+  height: 80px;         /* updated to new header height */
+  margin-top: -80px;
+  visibility: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

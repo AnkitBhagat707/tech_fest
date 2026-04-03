@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Literary Events</title>
+
+<link rel="stylesheet" href="/litery.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="slider">
+<div class="slides">
+<img src="https://i.pinimg.com/1200x/75/fd/63/75fd630ce2a46b50f4fb2a8fa885fbdf.jpg" class="active">
+<img src="https://i.pinimg.com/736x/54/79/ac/5479ac35db0bdf614f4869905af4d982.jpg">
+<img src="https://i.pinimg.com/736x/e4/93/ee/e493eebfeab21c3814f43e37d2eb3b15.jpg">
+</div>
+</div>
+
+
+
+</section>
+
+<!-- EVENTS -->
+<section class="members">
+
+<h2>LITERARY <span>EVENTS</span></h2>
+<p class="subtitle">Energy • Youth • Creativity</p>
+
+<div class="member-grid">
+
+<a href="/student?activity=DEBATE">
+<div class="card">
+<img src="https://i.pinimg.com/1200x/db/d8/6a/dbd86ab3ae0eedfd74129241109a42be.jpg">
+<div class="overlay">
+<h3>DEBATE</h3>
+<p>Challenge</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=POETRY">
+<div class="card">
+<img src="https://i.pinimg.com/1200x/eb/af/c6/ebafc6966876c1a339d7613f54038c00.jpg">
+<div class="overlay">
+<h3>POETRY</h3>
+<p>Feelings</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=STANDUP_COMEDY">
+<div class="card">
+<img src="https://i.pinimg.com/736x/e4/93/ee/e493eebfeab21c3814f43e37d2eb3b15.jpg">
+<div class="overlay">
+<h3>STAND UP COMEDY</h3>
+<p>Fun</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=STORY_WRITING">
+<div class="card">
+<img src="https://i.pinimg.com/1200x/f7/cc/9a/f7cc9a63145eb35507b5a219d3a3389c.jpg">
+<div class="overlay">
+<h3>STORY WRITING</h3>
+<p>Art</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=CALLIGRAPHY">
+<div class="card">
+<img src="https://i.pinimg.com/736x/13/67/84/136784d102341a62af4020974c6c561a.jpg">
+<div class="overlay">
+<h3>CALLIGRAPHY</h3>
+<p>Art of Beauty</p>
+</div>
+</div>
+</a>
+
+</div>
+
+</section>
+
+<!-- JS INSIDE HTML -->
+<script>
+let slides = document.querySelectorAll(".slides img");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 3000);
+</script>
+
+</body>
+</html>

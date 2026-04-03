@@ -1,0 +1,119 @@
+/* Global Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background:#f5f7fb;
+}
+
+/* Title */
+.title{
+    text-align:center;
+    margin-top:80px;
+    margin-bottom:40px;
+    font-size:36px;
+    font-weight:600;
+    color:#1a1a1a;
+    letter-spacing:1px;
+}
+
+/* Notice Board Layout */
+.notice-board{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding:30px;
+}
+
+/* Notice Card */
+.notice{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    transition:all 0.3s ease;
+    border:1px solid #eee;
+}
+
+/* Hover effect */
+.notice:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 28px rgba(0,0,0,0.15);
+}
+
+/* Notice Image */
+.notice img {
+    width: 100%;
+    height: auto; /* Let height adjust automatically */
+    object-fit: contain; /* Show full image without cropping */
+    display: block;
+}
+/* Notice Content */
+.notice-content{
+    padding:18px;
+}
+
+/* Title */
+.notice h3{
+    font-size:20px;
+    color:#222;
+    margin-bottom:8px;
+    line-height:1.4;
+}
+
+/* Date */
+.notice-date{
+    font-size:14px;
+    color:#777;
+    margin-bottom:10px;
+}
+
+/* Empty message */
+.empty{
+    text-align:center;
+    font-size:20px;
+    color:#777;
+    padding:60px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .title{
+        font-size:28px;
+        margin-top:60px;
+    }
+
+    .notice img{
+        height:180px; /* slightly smaller for tablets */
+    }
+
+    .notice h3{
+        font-size:18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title{
+        font-size:24px;
+        margin-top:40px;
+    }
+
+    .notice img{
+        height:150px; /* smaller on mobile */
+    }
+
+    .notice h3{
+        font-size:16px;
+    }
+
+    .notice-board{
+        gap:20px;
+        padding:20px;
+    }
+}

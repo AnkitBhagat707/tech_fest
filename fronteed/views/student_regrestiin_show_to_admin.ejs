@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registered Students</title>
+  <link rel="stylesheet" href="/student_regresion_show_admin_to_all.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Registered Students</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Roll Number</th>
+        <th>Phone</th>
+        <th>Activities</th>
+      </tr>
+    </thead>
+   <tbody>
+  <% if(students.length === 0) { %>
+    <tr>
+      <td colspan="6">No students registered yet.</td>
+    </tr>
+  <% } %>
+
+  <% students.forEach(student => { %>
+    <tr>
+      <td><%= student.name %></td>
+      <td><%= student.email %></td>
+      <td><%= student.rollno %></td>
+      <td><%= student.phone %></td>
+      <td><%= student.activity.join(", ") %></td>
+      <td>
+        <form action="/admin_panel/students/delete/<%= student._id %>" method="POST">
+          <button type="submit" onclick="return confirm('Are you sure?')">
+            Delete
+          </button>
+        </form>
+      </td>
+    </tr>
+  <% }) %>
+</tbody>
+  </table>
+</div>
+
+</body>
+</html>

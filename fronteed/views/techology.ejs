@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technology Events</title>
+
+<link rel="stylesheet" href="/techlogoy.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="slider">
+<div class="slides">
+<img src="https://1.bp.blogspot.com/-RgxElcsZo9Y/XH6E1ZIeKXI/AAAAAAAAAXw/jFoWBitqgU0qXWLVn4DFSCi3i02sTmXygCKgBGAs/w5120/pubg-playerunknowns-battlegrounds-uhdpaper.com-4K-26.jpg" class="active">
+<img src="https://i.pinimg.com/736x/76/55/87/765587e389328e851fb9b1a5528fec76.jpg">
+<img src="https://i.pinimg.com/1200x/f5/67/6f/f5676fe4a3d124659809ae873024ea44.jpg">
+</div>
+</div>
+
+
+
+</section>
+
+<!-- EVENTS -->
+<section class="members">
+
+<h2>TECHNOLOGY <span>EVENTS</span></h2>
+<p class="subtitle">Energy • Youth • Creativity</p>
+
+<div class="member-grid">
+
+<a href="/student?activity=BGMI">
+<div class="card">
+<img src="https://i.pinimg.com/1200x/51/6a/74/516a74d6d701c86c007f668d7cf2891a.jpg">
+<div class="overlay">
+<h3>BGMI</h3>
+<p>Game</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=FREE_FIRE">
+<div class="card">
+<img src="https://i.pinimg.com/736x/c4/ea/ee/c4eaee6db09f9dfa184f97cc74630aa8.jpg">
+<div class="overlay">
+<h3>FREE FIRE</h3>
+<p>Game</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=MARS_MISSION">
+<div class="card">
+<img src="https://i.pinimg.com/736x/57/63/a9/5763a9b2fb27c4706449dd43738ff928.jpg">
+<div class="overlay">
+<h3>MARS MISSION</h3>
+<p>Game</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=TREASURE_HUNT">
+<div class="card">
+<img src="https://i.pinimg.com/1200x/f5/67/6f/f5676fe4a3d124659809ae873024ea44.jpg">
+<div class="overlay">
+<h3>TREASURE HUNT</h3>
+<p>Game</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=MINI_HACKATHON">
+<div class="card">
+<img src="https://i.pinimg.com/1200x/6b/3d/1e/6b3d1e2e6b36f3a4d0fffd7dfed23e13.jpg">
+<div class="overlay">
+<h3>MINI HACKATHON</h3>
+<p>Competition</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=CAR_RACE">
+<div class="card">
+<img src="https://i.pinimg.com/1200x/63/9c/c3/639cc36c591cca14053c1188f78ef1f1.jpg">
+<div class="overlay">
+<h3>CAR RACE</h3>
+<p>Battle</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=TECH_QUIZ">
+<div class="card">
+<img src="https://i.pinimg.com/1200x/61/7d/c0/617dc05eac3b77e5f9b2406e1fae6ac0.jpg">
+<div class="overlay">
+<h3>TECH QUIZ</h3>
+<p>Challenge</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=IOT_PROJECT">
+<div class="card">
+<img src="https://i.pinimg.com/1200x/93/0d/c1/930dc1ac4570507ca25303a967e0cc2d.jpg">
+<div class="overlay">
+<h3>IOT PROJECT</h3>
+<p>Show</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=CODING_CONTEST">
+<div class="card">
+<img src="https://i.pinimg.com/736x/76/55/87/765587e389328e851fb9b1a5528fec76.jpg">
+<div class="overlay">
+<h3>CODING CONTEST</h3>
+<p>Challenge</p>
+</div>
+</div>
+</a>
+
+</div>
+
+</section>
+
+<!-- JS INSIDE HTML -->
+<script>
+let slides = document.querySelectorAll(".slides img");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 3000);
+</script>
+
+</body>
+</html>

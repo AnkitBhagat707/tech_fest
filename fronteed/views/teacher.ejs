@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery</title>
+
+<link rel="stylesheet" href="/teacher.css">
+</head>
+
+<body>
+
+<div class="gallery">
+
+<img src="/mix pic/2 (1).jpeg" onclick="openImage(0)">
+<img src="/mix pic/3 (1).jpeg" onclick="openImage(1)">
+<img src="/mix pic/4 (1).jpeg" onclick="openImage(2)">
+<img src="/mix pic/5 (1).jpeg" onclick="openImage(3)">
+
+<img src="/mix pic/6 (1).jpeg" onclick="openImage(4)">
+<img src="/mix pic/7 (1).jpeg" onclick="openImage(5)">
+<img src="/mix pic/8.jpeg" onclick="openImage(7)">
+
+<img src="/mix pic/9.jpeg" onclick="openImage(8)">
+<img src="/mix pic/10.jpeg" onclick="openImage(9)">
+<img src="/mix pic/12.jpeg" onclick="openImage(11)">
+
+<img src="/mix pic/13.jpeg" onclick="openImage(12)">
+<img src="/mix pic/14.jpeg" onclick="openImage(13)">
+<img src="/mix pic/15.jpeg" onclick="openImage(14)">
+<img src="/mix pic/16.jpeg" onclick="openImage(15)">
+
+<img src="/mix pic/17.jpeg" onclick="openImage(16)">
+<img src="/mix pic/18.jpeg" onclick="openImage(17)">
+<img src="/mix pic/1 (3).jpeg" onclick="openImage(18)">
+<img src="/mix pic/20.jpeg" onclick="openImage(19)">
+
+<img src="/mix pic/21.jpeg" onclick="openImage(20)">
+<img src="/mix pic/22.jpeg" onclick="openImage(21)">
+
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <span class="close" onclick="closeImage()">✖</span>
+  <span class="prev" onclick="prevImage()">❮</span>
+  <img id="popupImg">
+  <span class="next" onclick="nextImage()">❯</span>
+</div>
+
+<!-- JS INSIDE HTML -->
+<script>
+let images = [
+"/mix pic/2 (1).jpeg","/mix pic/3 (1).jpeg","/mix pic/4 (1).jpeg",
+"/mix pic/5 (1).jpeg","/mix pic/6 (1).jpeg","/mix pic/7 (1).jpeg","/mix pic/8.jpeg",
+"/mix pic/9.jpeg","/mix pic/10.jpeg","/mix pic/12.jpeg",
+"/mix pic/13.jpeg","/mix pic/14.jpeg","/mix pic/15.jpeg","/mix pic/16.jpeg",
+"/mix pic/17.jpeg","/mix pic/18.jpeg","/mix pic/20.jpeg",
+"/mix pic/21.jpeg","/mix pic/22.jpeg"
+];
+
+let currentIndex = 0;
+
+function openImage(index){
+  currentIndex = index;
+  document.getElementById("popup").style.display="flex";
+  document.getElementById("popupImg").src = images[currentIndex];
+}
+
+function closeImage(){
+  document.getElementById("popup").style.display="none";
+}
+
+function nextImage(){
+  currentIndex = (currentIndex + 1) % images.length;
+  document.getElementById("popupImg").src = images[currentIndex];
+}
+
+function prevImage(){
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  document.getElementById("popupImg").src = images[currentIndex];
+}
+</script>
+
+</body>
+</html>

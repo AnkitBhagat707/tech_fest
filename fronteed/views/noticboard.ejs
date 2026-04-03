@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Notice Board</title>
+
+<link rel="stylesheet" href="/noticboard.css">
+<%- include("include/header.ejs") %>
+
+</head>
+
+<body>
+
+<h1 class="title">Notice Board</h1>
+
+<section class="notice-board">
+
+<% if(notices.length === 0){ %>
+<p class="empty">No notices uploaded yet</p>
+<% } %>
+
+<% notices.forEach(notice => { %>
+
+<div class="notice">
+
+<h3><%= notice.title %></h3>
+
+<img src="/uploads/<%= notice.image %>" alt="notice">
+
+</div>
+
+<% }) %>
+
+</section>
+
+
+
+<%- include("include/fotter.ejs") %>
+</body>
+</html>

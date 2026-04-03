@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Notices | Admin Panel</title>
+  <link rel="stylesheet" href="/manage_notic.css">
+</head>
+<body>
+
+  <h1 class="title">Manage Notices</h1>
+
+  <div class="table-container">
+    <table class="notice-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Image</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% notices.forEach(notice => { %>
+        <tr>
+          <td><%= notice.title %></td>
+          <td>
+            <img src="/uploads/<%= notice.image %>" alt="<%= notice.title %>">
+          </td>
+          <td>
+            <a href="/admin_panel/notice/edit/<%= notice._id %>" class="btn btn-edit">Edit</a>
+            <form action="/admin_panel/notice/delete/<%= notice._id %>" method="POST" style="display:inline;">
+              <button type="submit" class="btn btn-delete">Delete</button>
+            </form>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

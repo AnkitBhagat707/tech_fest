@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/header.css">
+
+<header>
+
+<div class="university-name">BU EMANATION</div>
+
+<div id="menu-toggle">☰</div>
+
+<nav id="nav-menu">
+<a href="/">Home</a>
+<a href="/Home/event">Events</a>
+<a href="/Home/noticboard">Noticeboard</a>
+<a href="/Home/gallary">Gallery</a>
+<a href="/student">Register</a>
+</nav>
+
+</header>
+
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", () => {
+navMenu.classList.toggle("active");
+});
+</script>

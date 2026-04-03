@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Baddi University</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="education.css">
+</head>
+
+<body>
+
+<!-- HERO (SLIDER) -->
+<section class="hero">
+
+  <div class="slider">
+    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1" class="slide active">
+    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7" class="slide">
+    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754" class="slide">
+  </div>
+
+  <div class="hero-content">
+    <h1>About Us</h1>
+    <p>Excellence in Education</p>
+    
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about container">
+
+  <div class="image-grid">
+    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
+    <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0">
+    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+    <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b">
+  </div>
+
+  <div class="about-text">
+    <span>Since 2002</span>
+    <h2>We Are A Leading University</h2>
+    <p>
+      Baddi University provides quality education with modern infrastructure,
+      experienced faculty, and industry-ready programs.
+    </p>
+
+    <p>
+      We focus on practical learning, innovation, and research to prepare
+      students for real-world challenges.
+    </p>
+
+    <b>
+      We ensure safety, growth, and success for every student.
+    </b>
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <h2>What We Offer</h2>
+
+  <div class="service-boxes container">
+
+    <div class="box blue">
+      <h3>Engineering</h3>
+      <p>CSE, Mechanical, Civil</p>
+    </div>
+
+    <div class="box gray">
+      <h3>Management</h3>
+      <p>MBA, BBA programs</p>
+    </div>
+
+    <div class="box orange">
+      <h3>Computer Science</h3>
+      <p>BCA, MCA & IT courses</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-content">
+    <h2>Build Your Career With Us</h2>
+    <p>Join Baddi University Today</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>📍 Baddi, Himachal Pradesh</div>
+  <div>📞 +91 9816006185</div>
+  <div>📧 admissions@baddiuniv.ac.in</div>
+</footer>
+
+<!-- SLIDER JS -->
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 3000);
+</script>
+
+</body>
+</html>

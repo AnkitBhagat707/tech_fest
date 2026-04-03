@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+
+  <link rel="stylesheet" href="/student_register.css">
+  <%- include("include/header.ejs") %>
+
+  <style>
+    .message {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .success { color: green; }
+    .error { color: red; }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>Student Registration</h2>
+
+  <!-- FORM -->
+  <form id="registerForm">
+
+    <label>Name</label>
+    <input type="text" name="name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Roll Number</label>
+    <input type="text" name="rollno" required>
+
+    <label>Phone Number</label>
+    <input type="tel" name="phone" required pattern="\d{10}" placeholder="10-digit phone">
+
+    <label>Select Activities</label>
+    <select name="activity" multiple size="10" required>
+      <option value="music">Music</option>
+      <option value="dance">Dance</option>
+      <option value="coding">Coding</option>
+      <option value="bgmi">BGMI</option>
+      <option value="free fire">Free Fire</option>
+      <option value="treasure hunt">Treasure Hunt</option>
+      <option value="debate">Debate</option>
+      <option value="story writing">Story Writing</option>
+      <option value="poetry">Poetry</option>
+      <option value="calligraphy">Calligraphy</option>
+      <option value="stand up comedy">Stand Up Comedy</option>
+      <option value="poster making">Poster Making</option>
+      <option value="hand painting">Hand Painting</option>
+      <option value="nail art">Nail Art</option>
+      <option value="theme based art gallery">Theme Based Art Gallery</option>
+      <option value="face painting">Face Painting</option>
+      <option value="cup snatching">Cup Snatching</option>
+      <option value="push up challenge">Push Up Challenge</option>
+      <option value="riddles">Riddles</option>
+      <option value="flip the bottle">Flip the Bottle</option>
+      <option value="face arranging">Face Arranging</option>
+      <option value="mind tricks">Mind Tricks</option>
+      <option value="naati">Naati</option>
+      <option value="vandana">Vandana</option>
+      <option value="bhangra">Bhangra</option>
+      <option value="haryanvi dance">Haryanvi Dance</option>
+      <option value="south indian dance">South Indian Dance</option>
+      <option value="gidda">Gidda</option>
+      <option value="bollywood">Bollywood</option>
+      <option value="modelling">Modelling</option>
+      <option value="nepali dance">Nepali Dance</option>
+      <option value="skit">Skit</option>
+      <option value="group singing">Group Singing</option>
+      <option value="duet singing">Duet Singing</option>
+    </select>
+
+    <button type="submit">Register</button>
+
+  </form>
+
+  <!-- MESSAGE -->
+  <p id="message" class="message"></p>
+
+</div>
+
+<%- include("include/fotter.ejs") %>
+
+<!-- SCRIPT -->
+<script>
+document.getElementById("registerForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const activities = Array.from(form.activity.selectedOptions).map(opt => opt.value);
+
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    rollno: form.rollno.value,
+    phone: form.phone.value,
+    activity: activities
+  };
+
+  try {
+    // Change the URL to local backend
+    const response = await fetch("http://localhost:8000/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    if (!response.ok) throw new Error("Network response was not ok");
+
+    const text = await response.text();
+    const messageEl = document.getElementById("message");
+    messageEl.innerText = text;
+    messageEl.className = "message success";
+
+  } catch (err) {
+    const messageEl = document.getElementById("message");
+    messageEl.innerText = "Server error ❌";
+    messageEl.className = "message error";
+    console.error(err);
+  }
+});
+</script>
+
+</body>
+</html>

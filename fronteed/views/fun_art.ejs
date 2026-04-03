@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fine Arts</title>
+
+<link rel="stylesheet" href="/fun_art.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="slider">
+<div class="slides">
+<img src="art pic/01.jpeg" class="active">
+<img src="art pic/002.jpeg">
+<img src="/art pic/003.jpeg">
+<img src="/art pic/004.jpeg">
+</div>
+</div>
+
+
+
+</section>
+
+<!-- EVENTS -->
+<section class="members">
+
+<h2>FINE <span>ARTS</span></h2>
+<p class="subtitle">Energy • Youth • Creativity</p>
+
+<div class="member-grid">
+
+<a href="/student?activity=POSTER_MAKING">
+<div class="card">
+<img src="art pic/01.jpeg">
+<div class="overlay">
+<h3>POSTER MAKING</h3>
+<p>Competition</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=HAND_PAINTING">
+<div class="card">
+<img src="/art pic/002.jpeg">
+<div class="overlay">
+<h3>HAND PAINTING</h3>
+<p>Artist</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=NAIL_ART">
+<div class="card">
+<img src="/art pic/003.jpeg">
+<div class="overlay">
+<h3>NAIL ART</h3>
+<p>Painting</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=THEME_ART">
+<div class="card">
+<img src="/art pic/004.jpeg">
+<div class="overlay">
+<h3>THEME BASED ART</h3>
+<p>Gallery</p>
+</div>
+</div>
+</a>
+
+</div>
+
+</section>
+
+<!-- JS INSIDE HTML -->
+<script>
+let slides = document.querySelectorAll(".slides img");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 3000);
+</script>
+
+</body>
+</html>

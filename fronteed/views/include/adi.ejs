@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admissions | Baddi University</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/adi.css">
+</head>
+
+<body>
+
+<!-- HERO SECTION WITH SLIDER -->
+<section class="hero">
+
+  <div class="slider">
+    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644" class="slide active">
+    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b" class="slide">
+    <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b" class="slide">
+  </div>
+
+  <div class="hero-content">
+    <h1>Admissions & Financial Aid</h1>
+    <p>Start Your Journey With Us</p>
+    <form action="https://bu.servergi.com:8079/OLABADDI/Student/Welcome" method="GET">
+  <button type="submit">Apply Now</button>
+</form>
+    </form>
+  </div>
+
+</section>
+
+<!-- ABOUT / ADMISSION INFO -->
+<section class="about container">
+
+  <div class="image-grid">
+    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+    <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0">
+    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+  </div>
+
+  <div class="about-text">
+    <span>Apply Now</span>
+    <h2>Admissions Open 2026</h2>
+
+    <p>
+      Baddi University offers a simple and transparent admission process
+      with expert guidance for students.
+    </p>
+
+    <p>
+      We provide scholarships, financial aid, and loan support to help
+      students achieve their dreams without financial burden.
+    </p>
+
+    <b>
+      Secure your future with quality education and strong support.
+    </b>
+  </div>
+
+</section>
+
+<!-- PROGRAMS -->
+<section class="services">
+  <h2>Programs Offered</h2>
+
+  <div class="service-boxes container">
+
+    <div class="box blue">
+      <h3>Undergraduate</h3>
+      <p>B.Tech, BBA, BCA</p>
+    </div>
+
+    <div class="box gray">
+      <h3>Postgraduate</h3>
+      <p>MBA, MCA, M.Tech</p>
+    </div>
+
+    <div class="box orange">
+      <h3>Scholarships</h3>
+      <p>Merit-based & Need-based Aid</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-content">
+    <h2>Need Financial Support?</h2>
+    <p>Explore Scholarships & Apply Today</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>📍 Baddi, Himachal Pradesh</div>
+  <div>📞 +91 9816006185</div>
+  <div>📧 admissions@baddiuniv.ac.in</div>
+</footer>
+
+<!-- SLIDER SCRIPT -->
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 3000);
+</script>
+
+</body>
+</html>

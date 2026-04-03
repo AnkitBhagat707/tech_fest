@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Edit Notice | Admin</title>
+
+<link rel="stylesheet" href="/edit_notice.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="title">Edit Notice</h1>
+
+<form action="/admin_panel/notice/edit/<%= notice._id %>" method="POST" enctype="multipart/form-data"class="notice-form">
+
+<div class="form-group">
+
+<label>Notice Title</label>
+
+<input 
+type="text" 
+name="title" 
+value="<%= notice.title %>" 
+required
+>
+
+</div>
+
+<div class="form-group">
+
+<label>Current Image</label>
+
+<div class="image-preview">
+
+<img src="/uploads/<%= notice.image %>" alt="Notice Image">
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>Upload New Image</label>
+
+<input type="file" name="image">
+
+</div>
+
+<div class="buttons">
+
+<button type="submit" class="btn update">
+Update Notice
+</button>
+
+<a href="/admin_panel/notices" class="btn cancel">
+Cancel
+</a>
+
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>

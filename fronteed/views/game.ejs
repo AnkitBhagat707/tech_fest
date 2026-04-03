@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fun Events</title>
+
+<link rel="stylesheet" href="/game.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="slider">
+<div class="slides">
+<img src="/game pic/1 (1).jpeg" class="active">
+<img src="/game pic/2.jpeg">
+<img src="/game pic/3.jpeg">
+<img src="/game pic/4.jpeg">
+<img src="/game pic/5.jpeg">
+</div>
+</div>
+
+
+
+</section>
+
+<!-- EVENTS -->
+<section class="members">
+
+<h2>FUN <span>EVENT</span></h2>
+<p class="subtitle">Energy • Youth • Creativity</p>
+
+<div class="member-grid">
+
+<a href="/student?activity=FACE_PAINTING">
+<div class="card">
+<img src="/game pic/7.jpeg">
+<div class="overlay">
+<h3>FACE PAINTING</h3>
+<p>Show</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=CUP_SNATCHING">
+<div class="card">
+<img src="/game pic/6.jpeg">
+<div class="overlay">
+<h3>CUP SNATCHING</h3>
+<p>Game</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=PUSH_UP">
+<div class="card">
+<img src="/game pic/5.jpeg">
+<div class="overlay">
+<h3>PUSH UP</h3>
+<p>Challenge</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=RIDDLES">
+<div class="card">
+<img src="/game pic/1 (1).jpeg">
+<div class="overlay">
+<h3>RIDDLES</h3>
+<p>Tricky Question</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=FLIP_BOTTLE">
+<div class="card">
+<img src="/game pic/4.jpeg">
+<div class="overlay">
+<h3>FLIP THE BOTTLE</h3>
+<p>Funny</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=FACE_ARRANGING">
+<div class="card">
+<img src="/game pic/3.jpeg">
+<div class="overlay">
+<h3>FACE ARRANGING</h3>
+<p>Funniest Face</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=MIND_TRICKS">
+<div class="card">
+<img src="/game pic/2.jpeg">
+<div class="overlay">
+<h3>MIND TRICKS</h3>
+<p>Game</p>
+</div>
+</div>
+</a>
+
+</div>
+
+</section>
+
+<!-- JS -->
+<script>
+let slides = document.querySelectorAll(".slides img");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 3000);
+</script>
+
+</body>
+</html>

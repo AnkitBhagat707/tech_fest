@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singing Events</title>
+
+<link rel="stylesheet" href="/signing.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="slider">
+<div class="slides">
+<img src="https://media.istockphoto.com/id/1555390440/photo/young-asian-chinese-solo-female-singer-singing-performance-on-stage.jpg?s=170667a&w=0&k=20&c=iDbe9wZ-B4yMvKWQiRdnwiutdq7RDzK5EPC2lNeyDkU=" class="active">
+<img src="https://elements-resized.envatousercontent.com/elements-video-cover-images/e3e50214-7075-4f9e-b22d-48b98b340316/video_preview/video_preview_0000.jpg?w=1200&h=630&cf_fit=crop&q=85&format=jpeg&s=8fdd0d29b44aeebac99296678dcd5367dc172bad63dbe3d95d7ae21957dac417">
+<img src="https://www.artsandmindlab.org/wp-content/uploads/2019/12/chorus-Frank-Alarcon-Unsplash-1-e1576807850643.jpg">
+<img src="https://www.artsandmindlab.org/wp-content/uploads/2019/12/chorus-Frank-Alarcon-Unsplash-1-e1576807850643.jpg"">
+</div>
+</div>
+
+
+
+</section>
+
+<!-- EVENTS -->
+<section class="members">
+
+<h2>SINGING <span>EVENTS</span></h2>
+<p class="subtitle">Energy • Youth • Creativity</p>
+
+<div class="member-grid">
+
+<a href="/student?activity=SOLO_SINGING">
+<div class="card">
+<img src="https://media.istockphoto.com/id/1555390440/photo/young-asian-chinese-solo-female-singer-singing-performance-on-stage.jpg?s=170667a&w=0&k=20&c=iDbe9wZ-B4yMvKWQiRdnwiutdq7RDzK5EPC2lNeyDkU=">
+<div class="overlay">
+<h3>SOLO SINGING</h3>
+<p>Vocalist</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=DUO_SINGING">
+<div class="card">
+<img src="https://elements-resized.envatousercontent.com/elements-video-cover-images/e3e50214-7075-4f9e-b22d-48b98b340316/video_preview/video_preview_0000.jpg?w=1200&h=630&cf_fit=crop&q=85&format=jpeg&s=8fdd0d29b44aeebac99296678dcd5367dc172bad63dbe3d95d7ae21957dac417">
+<div class="overlay">
+<h3>DUO SINGING</h3>
+<p>Vocalist</p>
+</div>
+</div>
+</a>
+
+<a href="/student?activity=GROUP_SINGING">
+<div class="card">
+<img src="https://www.artsandmindlab.org/wp-content/uploads/2019/12/chorus-Frank-Alarcon-Unsplash-1-e1576807850643.jpg">
+<div class="overlay">
+<h3>GROUP SINGING</h3>
+<p>Vocalist</p>
+</div>
+</div>
+</a>
+
+</div>
+
+</section>
+
+<!-- JS INSIDE HTML -->
+<script>
+let slides = document.querySelectorAll(".slides img");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 3000);
+</script>
+
+</body>
+</html>

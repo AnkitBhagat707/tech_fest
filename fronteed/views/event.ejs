@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events & Members</title>
+  <link rel="stylesheet" href="/event.css">
+  <%- include("include/header.ejs") %>
+</head>
+<body>
+
+<!-- HERO VIDEO SECTION -->
+<section class="hero">
+  <video id="heroVideo" autoplay muted loop playsinline class="hero-video">
+    <source src="/Video/v1.mp4" type="video/mp4">
+  </video>
+
+  
+
+  <div class="sound-btn" onclick="toggleSound()">🔊</div>
+</section>
+
+<!-- MEMBERS / EVENTS GRID -->
+<section class="members">
+  <h2><span>Events</span></h2>
+
+  <div class="member-grid">
+
+    <a href="/cultural" class="card">
+      <img src="/demo img/1.jpeg" alt="Cultural">
+      <div class="overlay">
+        <h3>CULTURAL</h3>
+        <p>Activities</p>
+      </div>
+    </a>
+
+    <a href="/lit" class="card">
+      <img src="/demo img/08.jpeg" alt="Literary">
+      <div class="overlay">
+        <h3>LITERARY</h3>
+        <p>Events</p>
+      </div>
+    </a>
+
+    <a href="/tech" class="card">
+      <img src="/demo img/02.jpeg" alt="Technical">
+      <div class="overlay">
+        <h3>TECHNICAL</h3>
+        <p>Events</p>
+      </div>
+    </a>
+
+    <a href="/fun_art" class="card">
+      <img src="/demo img/03.jpeg" alt="Fine Arts">
+      <div class="overlay">
+        <h3>FINE ARTS</h3>
+        <p>Fun Events</p>
+      </div>
+    </a>
+
+    <a href="/sign" class="card">
+      <img src="/demo img/05.jpeg" alt="Singing">
+      <div class="overlay">
+        <h3>SINGING</h3>
+        <p>Vocalist</p>
+      </div>
+    </a>
+
+    <a href="/quiz" class="card">
+      <img src="/demo img/06.jpeg" alt="Quiz">
+      <div class="overlay">
+        <h3>QUIZ</h3>
+        <p>Mind Games</p>
+      </div>
+    </a>
+
+    <a href="/game" class="card">
+      <img src="/demo img/07.jpeg" alt="Games">
+      <div class="overlay">
+        <h3>GAMES</h3>
+        <p>Fun & Enjoy</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<script src="CE.js"></script>
+<%- include("include/fotter.ejs") %>
+
+<script>
+  function toggleSound(){
+    const video = document.getElementById("heroVideo");
+    video.muted = !video.muted;
+  }
+</script>
+
+</body>
+</html>
