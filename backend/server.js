@@ -30,7 +30,7 @@ app.use(session({
 }));
 
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../fronted/views"));
+app.set("views", path.join(__dirname, "../frontend/views"));
 
 // 🔐 AUTH MIDDLEWARE
 const isAdminLoggedIn = (req, res, next) => {
